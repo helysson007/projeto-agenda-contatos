@@ -14,10 +14,10 @@
             <h1>Agenda Telefônica</h1>
         </header>
         <form id="agenda-atividade">
-            <input type="text" id="nome-atividade" required placeholder="Nome">
-            <input type="text" id="sobrenome-atividade" required placeholder="Sobrenome">
-            <input type="number" id="prefixo-atividade" required placeholder="ddd">
-            <input type="number" id="numero-atividade" required placeholder="Numero">
+            <input type="text" id="nome-atividade" required placeholder="Nome" />
+            <input type="text" id="sobrenome-atividade" required placeholder="Sobrenome" />
+            <input type="tel" id="prefixo-atividade" required placeholder="ddd" maxlength="2" />
+            <input type="tel" id="numero-atividade" required placeholder="Numero" maxlength="9" />
             <button type="submit">Cadastrar</button>
         </form>
         <table>
@@ -28,9 +28,6 @@
                     </th>
                     <th>
                         Sobrenome
-                    </th>
-                    <th>
-                        DDD
                     </th>
                     <th>
                         Numero cadastrado

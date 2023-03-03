@@ -6,12 +6,12 @@ let linhas = ''
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
-
     adicionaLinha()
     atualizaTabela()
 
 })
 
+//criando a função que vai ser responsavel por adicionar linhas no html
 function adicionaLinha(){
         const inputNomeAtividade = document.getElementById('nome-atividade')
         const inputSobrenomeAtividade = document.getElementById('sobrenome-atividade')
@@ -29,13 +29,12 @@ function adicionaLinha(){
             let linha = '<tr>'
             linha += `<td>${inputNomeAtividade.value}</td>`
             linha += `<td>${inputSobrenomeAtividade.value}</td>`
-            linha += `<td>${inputPrefixoAtividade.value}</td>`
-            linha += `<td>${inputNumeroAtividade.value}</td>`
+            linha += `<td>${inputPrefixoAtividade.value} ${inputNumeroAtividade.value}</td>`
             linha += `</td>`
-
             linhas += linha
         }
 
+        //agora vamos limpar os campos para por novos conteudos no formulario
         inputNomeAtividade.value = ''
         inputSobrenomeAtividade.value =''
         inputPrefixoAtividade.value = ''
@@ -47,6 +46,7 @@ function atualizaTabela(){
     const corpoTabela = document.querySelector('tbody')
     corpoTabela.innerHTML = linhas
 }
+
 
 
 
